@@ -1,10 +1,12 @@
 
 var express = require('express');
-var ejs = require('ejs')
+var pug = require('pug');
+var ejs = require('ejs');
 var app = express();
 
 // lines 7 - 21 run the html file to the localhost
 app.set("view engine", "ejs");
+app.set("view engine", "pug");
 
 var server = app.listen(8080, listening);
 
@@ -33,11 +35,16 @@ app.get("/", function(req, res){
 	list: [
 	    'baguette',
 	    'basil',
-	    'tomatoes'
+	    'tomatoes',
+	    'meat', 
+	    'beer',
+	    'milk',
+	    'water',
+	    'peanut butter'
 	]
     }]
 };
-    res.render("list",{files: data.groceries});
+    res.render("list.pug",{files: data.groceries});
 })
 
 // hard coded into javascript to avoid a JSON file
