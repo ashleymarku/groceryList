@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Grocery List</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Grocery list </h1>
+
+      <% for(let i = 0; i < files.length; i++) { %>
+        <article>
+            <h2><%= files[i].store %></h1>
+            <p><%= files[i].list %></p>
+        </article>
+    <% } %>
+
+
+    </body>
+</html>
