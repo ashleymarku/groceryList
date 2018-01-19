@@ -3,9 +3,8 @@ html
   head
     
   body
-    h2#Grocery  Grocery List
+    h2#word  Grocery List
     each i in files
       div#message
         h3()= "Store: " + i.store + " "
         h5()= "List: " + i.list + " "
-    

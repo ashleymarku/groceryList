@@ -5,8 +5,8 @@ var ejs = require('ejs');
 var app = express();
 
 // lines 7 - 21 run the html file to the localhost
-app.set("view engine", "ejs");
-app.set("view engine", "pug");
+app.set("view engine", "ejs", "pug");
+
 
 var server = app.listen(8080, listening);
 
@@ -44,7 +44,7 @@ app.get("/", function(req, res){
 	]
     }]
 };
-    res.render("list.pug",{files: data.groceries});
+    res.render("list.ejs",{files: data.groceries});
 })
 
 // hard coded into javascript to avoid a JSON file
